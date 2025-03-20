@@ -17,19 +17,24 @@ function secondsToMinutesSeconds(seconds) {
 }
 
 async function getSongs() {
-  let a = await fetch("/songs/");  // Relative path, served from public/
-  let response = await a.text();
-  let div = document.createElement("div");
-  div.innerHTML = response;
-  let as = div.getElementsByTagName("a");
-  let songs = [];
-  for (let i = 0; i < as.length; i++) {
-    const element = as[i];
-    if (element.href.endsWith(".mp3")) {
-      songs.push(element.href.split("/songs/")[1]);
-    }
-  }
-  return songs;
+  return [
+    "Apsara - Prem Dhillon.mp3",
+    "Barkat - Ranjit Bawa.mp3",
+    "Chubby Girl - Davy.mp3",
+    "Dildarian - Kambi Rajpuria.mp3",
+    "Ehna Chauni Aa - Jassie Gill.mp3",
+    "FLOWERS - Talwiinder.mp3",
+    "Kamli Jehi - Amrinder Gill.mp3",
+    "Main Hi Kyon - Wazir Patar.mp3",
+    "Mirrors - Jordan Sandhu.mp3",
+    "OVER AND OVER - Armaan Gill.mp3",
+    "Pyaar Hoya - Hustinder.mp3",
+    "Raula Pai Gya - Sajjan Adeeb.mp3",
+    "Shikayatan - Nimrat Khaira.mp3",
+    "Water - Diljit Dosanjh.mp3",
+    "Yaad - Jassa Dhillon.mp3",
+    "You And I - Prem Dhillon.mp3"
+  ];
 }
 
 const playMusic = (track, pause=false) => {
