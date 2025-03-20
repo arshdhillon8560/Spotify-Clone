@@ -1,5 +1,6 @@
 # 🎵 Spotify Clone
 https://spotify-clone-umber-one.vercel.app/
+
 A simple Spotify-like music player built with **HTML, CSS, and JavaScript**. This project allows users to browse and play songs with an interactive UI.
 
 ## 🚀 Features
